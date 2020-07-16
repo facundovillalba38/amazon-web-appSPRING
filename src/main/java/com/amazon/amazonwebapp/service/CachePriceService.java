@@ -1,13 +1,12 @@
 package com.amazon.amazonwebapp.service;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
 import com.amazon.amazonwebapp.domain.CachePrice;
 import com.amazon.amazonwebapp.repository.CachePriceRepository;
+
 
 @Service
 public class CachePriceService {
@@ -21,8 +20,8 @@ public class CachePriceService {
     public List<CachePrice> buscarDestacados() {
         return cpRepository.buscarTodos();
     }
-    
-    public List<CachePrice> buscarPorNombre(String consulta){
+
+    public List<CachePrice> buscarPorNombre(String consulta) {
         return cpRepository.buscarPorNombre(consulta);
     }
 }

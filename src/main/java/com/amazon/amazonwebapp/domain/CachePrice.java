@@ -1,5 +1,6 @@
 package com.amazon.amazonwebapp.domain;
 
+import java.sql.Timestamp;
 import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,7 +19,7 @@ public class CachePrice{
     @ManyToOne
     @JoinColumn(name="iditems", nullable=false)
     private Item item;
-    private LocalDate pricedate;
+    private Timestamp pricedate;
     private double discountprice;
     private String imageurl;
 
@@ -38,13 +39,15 @@ public class CachePrice{
         this.item = item;
     }
 
-    public LocalDate getPricedate() {
+    public Timestamp getPricedate() {
         return pricedate;
     }
 
-    public void setPricedate(LocalDate pricedate) {
+    public void setPricedate(Timestamp pricedate) {
         this.pricedate = pricedate;
     }
+
+    
 
     public double getDiscountprice() {
         return discountprice;
