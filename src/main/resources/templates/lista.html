@@ -15,19 +15,37 @@
     <link rel="stylesheet"
           href="css/styles.css">
 
-    <title>Ofertas de Amazon</title>
+    <title>Trae de Afuera</title>
 
     <body>
         <nav class="navbar navbar-dark bg-dark">
             <a class="navbar-brand" th:href="@{/}">
-                <img src="img/icon-amazonweb.png" width="30" height="30" alt="">
-                Ofertas Amazon
+                <img src="img/logotda.JPG" width="30" height="30" alt="">
+                Trae de Afuera
             </a>
             <form th:action="@{/buscar}" class="form-inline my-2 my-lg-0">
                 <input autofocus="autofocus" name="q" class="form-control mr-sm-2" type="search" th:placeholder="${param.q}" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
             </form>
         </nav>
+        <div class="container mt-4 ">
+        <div class="row">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width: 100%;">
+                <div class="carousel-inner" style="height: 400px;">
+                    <div class="carousel-item" style="/*! margin: 0 auto; */background-color: #f0f0f0;height: 100%;">
+                        <img src="img/bannertda.jpg" alt="..." class="d-block" style="width: 100%;object-fit: contain;margin: 0 auto;">
+                    </div>
+                    <div class="carousel-item" style="/*! margin: 0 auto; */">
+                        <img src="img/dhl.jpg" alt="..." class="d-block" style="object-fit: cover;width: 100%;margin: 0 auto;">
+                    </div>
+                    <div class="carousel-item active" style="/*! margin: 0 auto; */">
+                        <img src="img/amazon.png" alt="..." class="d-block" style="width: 100%;object-fit: contain;margin: 0 auto;">
+                    </div>
+                </div>
+                
+            </div>
+
+
         <div class="container mt-4 aw-destacados">
             <div class="row">
                 <div th:each="cache : ${cachePrice}" class="col-md-3 mb-4">
@@ -35,7 +53,9 @@
                         <img th:src="${cache.imageurl}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 th:text="${cache.item.itemname}" class="card-title"></h5>
-                            <p th:text="${cache.item.brand}" class="card-text"></p> 
+                            <p th:text="${cache.item.brand}" class="card-text"></p>
+                            <p th:text="${cache.idcacheprices}" class="card-text">Id cache Prices:</p>
+                            <p th:text="${cache.item.iditems}" class="card-text">Id Items: </p>
                             <p th:text="${cache.pricedate}"></p>
                             <p th:text="${cache.item.itemprice}" class="card-text"></p>
                             <p th:text="${cache.discountprice}" class="card-text"></p>

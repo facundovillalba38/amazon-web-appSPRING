@@ -2,6 +2,7 @@
     "elements": {},
     "attributes": {
         "th:text": {},
+        "th:if": {},
         "th:src": {},
         "th:action": {},
         "th:each": {},

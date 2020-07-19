@@ -20,6 +20,10 @@ public class CachePriceService {
     public List<CachePrice> buscarDestacados() {
         return cpRepository.buscarTodos();
     }
+    
+    public List<CachePrice> buscarUltimoItem(){
+        return cpRepository.buscarUltimoItem();
+    }            
 
     public List<CachePrice> buscarPorNombre(String consulta) {
         return cpRepository.buscarPorNombre(consulta);

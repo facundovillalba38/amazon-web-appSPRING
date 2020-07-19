@@ -1,7 +1,7 @@
 package com.amazon.amazonwebapp.domain;
 
 import java.sql.Timestamp;
-import java.time.LocalDate;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "cacheprices")
 public class CachePrice{
-    @Id
+    @Id@Column (name = "idcacheprices", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int idcacheprices;
     @ManyToOne
