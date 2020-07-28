@@ -14,7 +14,8 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>amazon-web-app</name>
     <description>Amazon Web Spring</description>
-
+    <!--<packaging>war</packaging>-->
+    
     <properties>
         <java.version>14</java.version>
     </properties>
@@ -32,7 +33,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -59,6 +59,7 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -68,8 +69,9 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <finalName>${artifactId}</finalName> 
     </build>
-
+    
     <repositories>
         <repository>
             <id>spring-milestones</id>
