@@ -18,6 +18,7 @@ public class Item {
     private String itemurl;
     private String brand;
     private String category;
+    private String marketPlace;
 
     public int getIditems() {
         return iditems;
@@ -74,6 +75,16 @@ public class Item {
     public void setCategory(String category) {
         this.category = category;
     }
+
+    public String getMarketPlace() {
+        return marketPlace;
+    }
+
+    public void setMarketPlace(String marketPlace) {
+        this.marketPlace = marketPlace;
+    }
+    
+    
 
     
 }

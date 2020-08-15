@@ -10,7 +10,8 @@ public interface CachePriceRepository extends JpaRepository<CachePrice, Integer>
   
     
     @Query("select v from CachePrice v order by v.pricedate desc")
-    List<CachePrice> buscarTodos();
+    List<CachePrice> buscarTodos(); 
+    
     
     @Query(value="SELECT items.itemName, items.brand, items.Category, items.ItemPrice, items.ItemUrl, cacheprices.idItems, cacheprices.imageurl, discountPrice, ultimaFecha from cacheprices inner join (" +
     "SELECT idItems,  max(PriceDate) as ultimaFecha FROM amazon.cacheprices group by idItems order by idItems, pricedate) ultimoprecio on cacheprices.idItems = ultimoprecio.idItems and " +
